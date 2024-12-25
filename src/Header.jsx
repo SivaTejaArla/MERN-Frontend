@@ -1,12 +1,14 @@
-
 import React from "react";
-export default function Header(){
-
-    return (
+export default function Header() {
 
 
-        <React.StrictMode>
-            <h1>Header</h1>
-        </React.StrictMode>
-    );
+      
+  return (
+    <React.StrictMode>
+      <div className="rounded-box" style={{maxWidth: '100vw', height: '100px', border: '2px solid black',  backgroundColor: 'lightblue', borderRadius : '10px' , padding : '15px'}}>
+    This box has rounded corners!
+  </div>
+
+    </React.StrictMode>
+  );
 }
