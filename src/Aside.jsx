@@ -1,10 +1,30 @@
 import React from "react";
+import ButtonDesign from "./components/Button";
 export default function Aside() {
+  const styles = {
+    container: {
+      display: "flex", // Use Flexbox for the container
+      justifyContent: "space-between", // Distribute space between items
+      maxWidth: "90vw",
+      padding: "5vh",
+      flexDirection: "column",
+      gap: "20px",
+    },
+  };
   return (
     <React.StrictMode>
-    <div className="rounded-box" style={{maxWidth: '30vw', height: '70vh', border: '2px solid black',  backgroundColor: 'lightblue', borderRadius : '10px' , padding : '15px' , margin : '15px' }}>
-    This box has rounded corners!
-  </div>
+      <div style={styles.container}>
+        <ButtonDesign name="Item" />
+
+        <ButtonDesign name="Item" />
+
+        <ButtonDesign name="Item" />
+
+        <ButtonDesign name="Item" />
+        <ButtonDesign name="Item" />
+
+        <ButtonDesign name="Item" />
+      </div>
     </React.StrictMode>
   );
 }

@@ -1,10 +1,56 @@
 import React from "react";
+import CardComponent from "./components/CardComponent";
 export default function Main() {
+  const styles = {
+    container: {
+      display: "flex",
+
+      justifyContent: "space-between",
+      flexWrap: "wrap",
+      overflowY: "auto",
+      gap: "20px",
+      maxHeight: "100vh", // Set a fixed height or max-height
+      padding: "10px",
+     
+    },
+
+    item: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "3px",
+    },
+  };
+
   return (
     <React.StrictMode>
-       <div className="rounded-box" style={{width: '80vw', height: '70vh', border: '2px solid black',  backgroundColor: 'lightblue', borderRadius : '10px' , padding : '15px' , margin : '15px' }}>
-    This box has rounded corners!
-  </div>
+      <div style={styles.container}>
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent/>
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+      </div>
     </React.StrictMode>
   );
 }

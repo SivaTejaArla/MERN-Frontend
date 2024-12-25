@@ -12,6 +12,7 @@ export default function Header() {
     leftContainer: {
       display: 'flex', // Use Flexbox for the left side container
       alignItems: 'flex-start', // Align items to the left
+      gap : '20px',
     },
     rightItem: {
       marginLeft: 'auto', // Push the right item to the far right
