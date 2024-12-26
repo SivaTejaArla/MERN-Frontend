@@ -13,7 +13,7 @@ export default function ButtonDesign(props) {
     fontSize: "1.2rem",
     fontWeight: "700",
     height: "5vh",
-    width: "8vw",
+    maxWidth : "fit-content",
     letterSpacing: "-.24px",
     margin: "0",
     outline: "none",

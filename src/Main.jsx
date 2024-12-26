@@ -11,6 +11,7 @@ export default function Main() {
       gap: "20px",
       maxHeight: "100vh", // Set a fixed height or max-height
       padding: "10px",
+      
      
     },
 
