@@ -41,15 +41,22 @@ export default function CardComponent() {
   };
 
   const { imageUrl, loading, error } = useImageFetcher();  // Use the custom hook here
+  const [breedName, setBreedName] = useState(null);
+
+  useEffect(() => {
+    if (imageUrl) {
+      const breed = imageUrl.split('/')[4]; // Split the URL and get the breed name
+      setBreedName(breed);
+    }
+  }, [imageUrl]); // This effect runs every time imageUrl changes
 
   if (loading) return <div>Loading...</div>;  // Handle loading state
   if (error) return <div>{error}</div>;      // Handle error state
-  const url = imageUrl;
 
-// Split the string by '/' and get the part that represents the breed name (index 4)
-const breedName = url.split('/')[4];
-
-
+  // Capitalize the first letter of breedName, and ensure breedName is not null
+  const capitalizedBreedName = breedName
+    ? breedName.charAt(0).toUpperCase() + breedName.slice(1)
+    : '';  // If breedName is null or undefined, set to an empty string
 
   return (
     <div style={styles.item}>
@@ -65,9 +72,9 @@ const breedName = url.split('/')[4];
           maxWidth: '30vh',
         }}
       />
-      <ButtonDesign name="Details" />
-      <ButtonDesign name={breedName} />
-      <ButtonDesign name="Details" />
+      <ButtonDesign name="Details" eventName="details" />
+      <ButtonDesign name={capitalizedBreedName || 'Breed Name'} /> {/* Display capitalized breed name */}
+      <ButtonDesign name="Add to favourites" eventName="details" />
     </div>
   );
 }

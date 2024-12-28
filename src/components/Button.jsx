@@ -52,7 +52,7 @@ export default function ButtonDesign(props) {
       }}
       onMouseUp={(e) => {
         Object.assign(e.target.style, hoverStyles); // Revert to hover styles
-      }}
+      }}>
 
       {props.name}
     </button>
