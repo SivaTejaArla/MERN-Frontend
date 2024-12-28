@@ -48,12 +48,12 @@ export default function ButtonDesign(props) {
         Object.assign(e.target.style, buttonStyles); // Revert to original styles
       }}
       onMouseDown={(e) => {
-        Object.assign(e.target.style, activeStyles); // Apply active styles
+        Object.assign(e.target.style, activeStyles); 
       }}
       onMouseUp={(e) => {
         Object.assign(e.target.style, hoverStyles); // Revert to hover styles
       }}
-    >
+
       {props.name}
     </button>
   );
