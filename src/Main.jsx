@@ -4,15 +4,12 @@ export default function Main() {
   const styles = {
     container: {
       display: "flex",
-
       justifyContent: "space-between",
       flexWrap: "wrap",
       overflowY: "auto",
       gap: "20px",
       maxHeight: "100vh", // Set a fixed height or max-height
       padding: "10px",
-      
-     
     },
 
     item: {
@@ -26,7 +23,7 @@ export default function Main() {
   return (
     <React.StrictMode>
       <div style={styles.container}>
-      {cards.map((_, index) => (
+        {cards.map((_, index) => (
           <CardComponent key={index} />
         ))}
       </div>
