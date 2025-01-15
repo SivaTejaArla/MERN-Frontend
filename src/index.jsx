@@ -6,24 +6,16 @@ import Main from "./main";
 import Footer from "./Footer";
 
 // The App component should return all your components
-export default function App() {
+function App() {
   return (
-    <div>
-      <header id="header">
-        <Header />
-      </header>
-      <div style={{ display: "flex", maxWidth: "100vw" }}>
-        <aside id="aside">
-          <Aside />
-        </aside>
-        <main id="main">
-          <Main />
-        </main>
-      </div>
-      <footer id="footer">
-        <Footer />
-      </footer>
-    </div>
+   <>
+   <Header/>
+   <div style={{display: "flex", alignItems: "flex-start"}}>
+    <Aside/><Main/>
+   </div>
+   <Footer/>
+   </>
+      
   );
 }
 

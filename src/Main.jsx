@@ -18,7 +18,7 @@ export default function Main() {
       gap: "3px",
     },
   };
-  const cardCount = 24; // Example: Render 24 CardComponents
+  const cardCount = 14; // Example: Render 24 CardComponents
   const cards = new Array(cardCount).fill(null); // Create an array with `cardCount` elements
   return (
     <React.StrictMode>
